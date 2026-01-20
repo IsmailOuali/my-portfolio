@@ -14,7 +14,8 @@ const Contact = () => {
                 <div style={styles.grid}>
                     <div style={styles.info}>
                         <p style={styles.subtext}>Got a project in mind? Let's build something extraordinary together.</p>
-                        <a href="mailto:hello@example.com" style={styles.email}>hello@example.com</a>
+                        <a href="mailto:ismail.ouali@ump.ac.ma" style={styles.email}>ismail.ouali@ump.ac.ma</a>
+                        <p style={{ ...styles.subtext, marginTop: '1rem' }}>+212688025523</p>
                     </div>
                     <form style={styles.form} onClick={(e) => e.preventDefault()}>
                         <input type="text" placeholder="NAME" style={styles.input} />

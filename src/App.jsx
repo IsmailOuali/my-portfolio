@@ -5,6 +5,7 @@ import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
 import InteractiveBackground from './components/InteractiveBackground';
+import Experience from './components/Experience';
 import DesktopOS from './components/DesktopMode/DesktopOS';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaDesktop } from 'react-icons/fa';
@@ -79,6 +80,7 @@ function App() {
               <Hero />
               <Projects />
               <About />
+              <Experience />
               <Contact />
             </Layout>
           </motion.div>

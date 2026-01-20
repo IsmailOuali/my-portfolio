@@ -12,12 +12,12 @@ const About = () => {
                     viewport={{ once: true }}
                     style={styles.textContainer}
                 >
-                    <h2 style={styles.heading}>THE STORY</h2>
+                    <h2 style={styles.heading}>PROFIL</h2>
                     <p style={styles.paragraph}>
-                        I am a digital artisan based in the cloud. My passion lies in bridging the gap between <span style={styles.highlight}>functional utility</span> and <span style={styles.highlight}>aesthetic beauty</span>.
+                        Creative and solution-oriented web developer, specialized in <span style={styles.highlight}>Laravel</span> and modern <span style={styles.highlight}>front-end frameworks</span>.
                     </p>
                     <p style={styles.paragraph}>
-                        With a background in computational design and visual arts, I approach every project as a unique problem-solving opportunity, wrapped in high-fidelity visuals.
+                        I have led several projects from end to end, applying best practices in development, security, and software architecture. My goal: to build reliable, intuitive, and scalable applications.
                     </p>
                     <div style={styles.stats}>
                         <div style={styles.statItem}>
@@ -25,12 +25,12 @@ const About = () => {
                             <span style={styles.statLabel}>YEARS EXP</span>
                         </div>
                         <div style={styles.statItem}>
-                            <span style={styles.statNumber}>50+</span>
+                            <span style={styles.statNumber}>20+</span>
                             <span style={styles.statLabel}>PROJECTS</span>
                         </div>
                         <div style={styles.statItem}>
-                            <span style={styles.statNumber}>15+</span>
-                            <span style={styles.statLabel}>AWARDS</span>
+                            <span style={styles.statNumber}>3+</span>
+                            <span style={styles.statLabel}>CERTIFICATIONS</span>
                         </div>
                     </div>
                 </motion.div>

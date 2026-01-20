@@ -11,8 +11,8 @@ const Hero = () => {
                 style={styles.content}
             >
                 <h1 style={styles.title}>
-                    <span style={styles.outline}>CREATIVE</span><br />
-                    DEVELOPER
+                    <span style={styles.outline}>OUALI</span><br />
+                    ISMAIL
                 </h1>
                 <motion.p
                     initial={{ opacity: 0 }}
@@ -20,7 +20,7 @@ const Hero = () => {
                     transition={{ delay: 0.5, duration: 1 }}
                     style={styles.subtitle}
                 >
-                    Crafting digital experiences that invoke emotion.
+                    Developpeur Full stack (Laravel/React)
                 </motion.p>
             </motion.div>
 

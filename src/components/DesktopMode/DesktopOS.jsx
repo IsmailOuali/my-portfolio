@@ -259,9 +259,7 @@ const DesktopOS = ({ onExit }) => {
             }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
                     <FaApple style={{ fontSize: '1.1rem' }} />
-                    <span style={{ fontWeight: 700 }}>Finder</span>
-                    <span>File</span>
-                    <span>Edit</span>
+                    <span style={{ fontWeight: 700 }}>Portfolio OS</span>
                     <span>View</span>
                     <span>Go</span>
                     <span>Window</span>
