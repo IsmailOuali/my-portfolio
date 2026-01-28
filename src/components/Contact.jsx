@@ -1,7 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    const [status, setStatus] = useState('');
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setStatus('sending');
+
+        // Simulating form submission
+        setTimeout(() => {
+            console.log('Form submitted:', formData);
+            setStatus('success');
+            setFormData({ name: '', email: '', message: '' });
+
+            // Reset status after 3 seconds
+            setTimeout(() => setStatus(''), 3000);
+        }, 1500);
+    };
+
     return (
         <section id="contact" style={styles.section}>
             <motion.div
@@ -17,11 +43,54 @@ const Contact = () => {
                         <a href="mailto:ismail.ouali@ump.ac.ma" style={styles.email}>ismail.ouali@ump.ac.ma</a>
                         <p style={{ ...styles.subtext, marginTop: '1rem' }}>+212688025523</p>
                     </div>
-                    <form style={styles.form} onClick={(e) => e.preventDefault()}>
-                        <input type="text" placeholder="NAME" style={styles.input} />
-                        <input type="email" placeholder="EMAIL" style={styles.input} />
-                        <textarea placeholder="MESSAGE" rows="4" style={styles.input} />
-                        <button style={styles.button}>SEND MESSAGE</button>
+                    <form style={styles.form} onSubmit={handleSubmit}>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="NAME"
+                            style={styles.input}
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="EMAIL"
+                            style={styles.input}
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                        <textarea
+                            name="message"
+                            placeholder="MESSAGE"
+                            rows="4"
+                            style={styles.input}
+                            value={formData.message}
+                            onChange={handleChange}
+                            required
+                        />
+                        <button
+                            type="submit"
+                            style={{
+                                ...styles.button,
+                                ...(status === 'sending' ? styles.buttonDisabled : {})
+                            }}
+                            disabled={status === 'sending'}
+                        >
+                            {status === 'sending' ? 'SENDING...' : status === 'success' ? 'SENT!' : 'SEND MESSAGE'}
+                        </button>
+
+                        {status === 'success' && (
+                            <motion.p
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                style={styles.successMessage}
+                            >
+                                Thank you! Your message has been sent.
+                            </motion.p>
+                        )}
                     </form>
                 </div>
             </motion.div>
@@ -95,7 +164,19 @@ const styles = {
         marginTop: '1rem',
         alignSelf: 'flex-start',
         fontFamily: 'var(--font-display)',
-        fontWeight: 700
+        fontWeight: 700,
+        transition: 'all 0.3s ease',
+        opacity: 1
+    },
+    buttonDisabled: {
+        opacity: 0.5,
+        cursor: 'not-allowed'
+    },
+    successMessage: {
+        color: '#4CAF50',
+        fontSize: '0.9rem',
+        marginTop: '1rem',
+        fontWeight: '500'
     }
 };
 

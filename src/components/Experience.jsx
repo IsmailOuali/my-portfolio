@@ -14,7 +14,7 @@ const Experience = () => {
         {
             company: 'DevNet',
             role: 'FULLSTACK DEVELOPER',
-            period: 'fév. 2025 - Today',
+            period: 'fev. 2025 - dec 2025',
             description: 'Full development of the classifieds platform (front-end, back-end, and database). Design of the application architecture and integration of features for user, listing, and payment management. Implementation of an admin dashboard for monitoring publications and statistics. Application of security best practices, performance optimization, and deployment to a production server. Collaboration with the design team to ensure a smooth and responsive user experience.'
         },
         {
